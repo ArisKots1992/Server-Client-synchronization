@@ -295,7 +295,7 @@ int main(int argc, char* argv[]){
                 }
         }
 	/* So from Now on we Are SURE that Working threads are dead */
-//	cout<<"Client Finished succesfully!"<<endl;
+//	cout<<"Client Finished successfully!"<<endl;
 	cout<<"All Working Threads Are dead!!"<<endl;
 	cout<<"Client Hash Tree List has : "<< listH->size()<<" Elements."<<endl;
 	cout<<"Server Hash Tree List has : " << ListServer->size()<<" Elements."<<endl;
@@ -363,7 +363,7 @@ target_client++;
                         perror2("pthread_join", err);
                         exit(1);
                 }
-cout<<"Client Finished Succesfully!"<<endl;
+cout<<"Client Finished Successfully!"<<endl;
 
 return 0;
 }
