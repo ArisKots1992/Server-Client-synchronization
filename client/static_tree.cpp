@@ -109,7 +109,7 @@ void Transform2D_to_1D(int height,int fan_out,struct Encoded**& level,struct Enc
 	}
 }
 
-/* filling the already existing 2D array with the 1D recieved Data */
+/* filling the already existing 2D array with the 1D received Data */
 
 void Assign1D_to_2D(int height, int fan_out, struct Encoded**& level, struct Encoded*& new_level){
 

@@ -158,10 +158,10 @@ int main(int argc, char* argv[]){
 						//	exit (EXIT_FAILURE);
 						}
 						else{
-							cout<<"Internal socket message recieved form ip : "<<ip<<endl;
-							/* so lets find out what kind of message we recieved */
+							cout<<"Internal socket message received form ip : "<<ip<<endl;
+							/* so lets find out what kind of message we received */
 							if( msg.expect > 0 ){
-								/* hmmm here we recieved EXPECT <int> */
+								/* hmmm here we received EXPECT <int> */
 								cout<<"EXPECT : "<<msg.expect<<endl;
 								/* So we send to our client message EXPECT */
 								char message[10];
@@ -331,7 +331,7 @@ void* working_thread(void* lists){
                 	if(i == 2){
                         	if( word[0].compare("GETFILES") == 0 ){
 					/* Find All files in the word[1] directory and insert PROCESSFILE message to the thread pool for each one */
-					cout<<pthread_self()<<" recieved GETFILES message"<<endl;
+					cout<<pthread_self()<<" received GETFILES message"<<endl;
 
         				DIR *dir;
         				struct dirent *ent;
@@ -398,7 +398,7 @@ void* working_thread(void* lists){
 			else if( i == 3 ){
 				/* If we recieve PROCESSFILE <directory> <filename> */
 				if( word[0].compare("PROCESSFILE")==0 ){
-					cout<<pthread_self()<<" recieved PROCESSFILE message"<<endl;
+					cout<<pthread_self()<<" received PROCESSFILE message"<<endl;
 
 			                struct Encoded** level;
         			        string str = word[1]+"/"+word[2];
@@ -433,7 +433,7 @@ void* working_thread(void* lists){
                         else if( i == 5 ){
 				/* GETDATA folder filename PageNo */
                                 if(word[0].compare("GETDATA")==0 ){
-					cout<<pthread_self()<<" recieved GETDATA message"<<endl;
+					cout<<pthread_self()<<" received GETDATA message"<<endl;
 					struct internal_socket_message msg;
 					msg.client_id = temp.client_id;		/* client id*/
 					msg.expect = 0;				/* Identifier for DATA */
